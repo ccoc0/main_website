@@ -242,9 +242,8 @@ body::before {
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid var(--accent-color);
-    box-shadow: 0 0 20px rgba(77, 168, 218, 0.3);
-    margin-bottom: 2rem;
+    display: block; /* ADD THIS - Removes the gap at the bottom */
+    /* ... keep other styles ... */
 }
 
 .about-desc {
@@ -337,6 +336,8 @@ footer { background-color: var(--nav-bg); text-align: center; padding: 2rem 0; b
     border-radius: 50%;
     overflow: hidden;
     cursor: pointer;
+    width: 180px;  /* ADD THIS */
+    height: 180px; /* ADD THIS */
 }
 
 .profile-overlay {
@@ -373,4 +374,27 @@ footer { background-color: var(--nav-bg); text-align: center; padding: 2rem 0; b
     50% {
         transform: scale(0.9); /* Shrinks slightly like a press */
     }
+}
+
+.email-link {
+    display: inline-flex; /* Aligns icon and text perfectly */
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    background-color: rgba(77, 168, 218, 0.1); /* Subtle blue background */
+    color: var(--accent-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px; /* Pill shape */
+    border: 1px solid rgba(77, 168, 218, 0.3);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: 0.3s ease;
+}
+
+.email-link:hover {
+    background-color: var(--accent-color); /* Fills with blue */
+    color: #fff; /* Text turns white */
+    border-color: var(--accent-color);
+    transform: translateY(-3px); /* Lifts up slightly */
+    box-shadow: 0 5px 15px rgba(77, 168, 218, 0.3); /* Glow effect */
 }
