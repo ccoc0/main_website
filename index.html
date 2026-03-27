@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Furinzone | Portfolio</title>
-    <link rel="stylesheet" href="website/style.css">
+    <link rel="stylesheet" href="style.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- Icons -->
@@ -22,6 +22,10 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="theme-toggle">
+        <i class="fas fa-sun"></i>
+    </button>
 </nav>
 
 <!-- SECTION 1: HOME / HERO -->
@@ -30,13 +34,10 @@
         <div class="card-content">
             <h1>Hi, I'm <span class="highlight">Keane Paul N. Lagunero</span></h1>
             <p class="subtitle">IT Student | Web Design & Development Enthusiast</p>
-
-            <!-- Social Links in Hero Card -->
             <div class="social-links-hero">
-                <a href="https://github.com/ccoc0" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.facebook.com/keanepaul1l/" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://github.com/sheroneko380" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://facebook.com/keane.lagunero" target="_blank"><i class="fab fa-facebook"></i></a>
             </div>
-
             <a href="#projects" class="btn-view">View Projects</a>
         </div>
     </div>
@@ -44,41 +45,81 @@
 
 <!-- SECTION 2: ABOUT -->
 <section id="about" class="section-style">
-    <div class="container-box">
+    <div class="about-container">
+        <div class="profile-img-wrapper">
+            <!-- CHANGE THE IMAGE SRC HERE -->
+            <img src="images/profile.jpg" alt="Keane Paul N. Lagunero" class="about-profile-img">
+        </div>
         <h2 class="section-title">About Me</h2>
-        <p>Hello! I'm Keane Paul N. Lagunero, an IT student passionate about building functional and aesthetic websites. I love turning ideas into reality through code.</p>
-        <p>Currently, I am exploring modern web technologies and improving my skills in both front-end and back-end development.</p>
+        <p class="about-desc">
+            I'm Keane Paul N. Lagunero, a dedicated IT student with a strong interest in front-end development and creating intuitive user experiences. I am currently honing my skills in modern web technologies to build responsive and functional websites.
+        </p>
+        <div class="about-btns">
+            <a href="#contact" class="btn-view">Get in Touch</a>
+            <a href="#" class="btn-outline">Download Resume</a>
+        </div>
     </div>
 </section>
 
-<!-- SECTION 3: SKILLS -->
+<!-- SECTION 3: SKILLS (Updated with Bars) -->
 <section id="skills" class="section-style alt-bg">
     <div class="container-box">
         <h2 class="section-title">My Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-item">
-                <i class="fab fa-html5"></i>
-                <span>HTML5</span>
+
+        <div class="skills-bars-container">
+            <!-- Skill 1 -->
+            <div class="skill-bar-item">
+                <div class="skill-header">
+                    <span>HTML5</span>
+                    <span>90%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="90"></div>
+                </div>
             </div>
-            <div class="skill-item">
-                <i class="fab fa-css3-alt"></i>
-                <span>CSS3</span>
+
+            <!-- Skill 2 -->
+            <div class="skill-bar-item">
+                <div class="skill-header">
+                    <span>CSS3</span>
+                    <span>80%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="80"></div>
+                </div>
             </div>
-            <div class="skill-item">
-                <i class="fab fa-js-square"></i>
-                <span>JavaScript</span>
+
+            <!-- Skill 3 -->
+            <div class="skill-bar-item">
+                <div class="skill-header">
+                    <span>JavaScript</span>
+                    <span>60%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="60"></div>
+                </div>
             </div>
-            <div class="skill-item">
-                <i class="fab fa-python"></i>
-                <span>Python</span>
+
+            <!-- Skill 4 -->
+            <div class="skill-bar-item">
+                <div class="skill-header">
+                    <span>Python</span>
+                    <span>75%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="75"></div>
+                </div>
             </div>
-            <div class="skill-item">
-                <i class="fas fa-database"></i>
-                <span>MySQL</span>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-paint-brush"></i>
-                <span>UI Design</span>
+
+            <!-- Skill 5 -->
+            <div class="skill-bar-item">
+                <div class="skill-header">
+                    <span>MySQL</span>
+                    <span>65%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="65"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -88,34 +129,8 @@
 <section id="projects" class="section-style">
     <div class="container-box">
         <h2 class="section-title">My Projects</h2>
-        <div class="projects-grid">
-            <!-- Project 1 -->
-            <div class="project-card">
-                <div class="project-img" style="background-color: #4a6fa5;"></div>
-                <div class="project-info">
-                    <h3>Project Alpha</h3>
-                    <p>A web application built for managing daily tasks efficiently.</p>
-                    <a href="#" class="project-link">View Code <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <!-- Project 2 -->
-            <div class="project-card">
-                <div class="project-img" style="background-color: #e09f3e;"></div>
-                <div class="project-info">
-                    <h3>Portfolio Website</h3>
-                    <p>My personal portfolio site created using HTML, CSS, and JavaScript.</p>
-                    <a href="#" class="project-link">View Demo <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <!-- Project 3 -->
-            <div class="project-card">
-                <div class="project-img" style="background-color: #2ecc71;"></div>
-                <div class="project-info">
-                    <h3>E-Commerce Concept</h3>
-                    <p>A front-end design concept for an online store.</p>
-                    <a href="#" class="project-link">View Design <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
+        <div class="coming-soon-box">
+            <p>Coming Soon...</p>
         </div>
     </div>
 </section>
@@ -126,21 +141,12 @@
         <h2 class="section-title">Get In Touch</h2>
         <p>Have a question or want to work together? Feel free to reach out!</p>
 
-        <!-- UPDATED FORM: This will open your email app to send the message -->
-        <form class="contact-form" action="https://formspree.io/f/xeepodow" method="POST">
-            <!-- Note: To make it send directly without backend code, change the form action to: -->
-            <!-- action="mailto:Laguneropaul@gmail.com" method="POST" enctype="text/plain" -->
-            <!-- But the cleanest way is the Mailto button below or Formspree -->
-
+        <form class="contact-form" action="mailto:Laguneropaul@gmail.com" method="POST" enctype="text/plain">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-
-            <!-- Button sends to your Gmail -->
             <button type="submit">Send Message</button>
         </form>
-
-        <!-- Direct Email Button -->
         <div class="direct-contact">
             <p>Or email me directly at:</p>
             <a href="mailto:Laguneropaul@gmail.com" class="email-link">Laguneropaul@gmail.com</a>
@@ -151,7 +157,6 @@
 <!-- Footer -->
 <footer>
     <div class="footer-content">
-        <!-- Socials in Footer -->
         <div class="social-links-footer">
             <a href="https://github.com/sheroneko380" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://facebook.com/keane.lagunero" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -159,6 +164,44 @@
         <p>&copy; 2023 Furinzone | Keane Paul N. Lagunero. All Rights Reserved.</p>
     </div>
 </footer>
+
+<!-- JavaScript for Theme Toggle & Skill Bars -->
+<script>
+    // --- Theme Toggle ---
+    const toggleBtn = document.getElementById('theme-toggle');
+    const html = document.documentElement; // Targets the <html> tag
+
+    toggleBtn.addEventListener('click', () => {
+        const currentTheme = html.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', newTheme);
+
+        // Change Icon
+        const icon = toggleBtn.querySelector('i');
+        if (newTheme === 'light') {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+        } else {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        }
+    });
+
+    // --- Skill Bar Animation ---
+    // Runs when the section is visible
+    const skillSection = document.getElementById('skills');
+    const progressBars = document.querySelectorAll('.skill-progress');
+
+    const showProgress = () => {
+        progressBars.forEach(bar => {
+            const value = bar.getAttribute('data-progress');
+            bar.style.width = value + '%';
+        });
+    };
+
+    // Simple trigger when page loads (you can make this advanced with Intersection Observer)
+    window.addEventListener('load', showProgress);
+</script>
 
 </body>
 </html>
