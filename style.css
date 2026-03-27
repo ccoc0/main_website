@@ -329,3 +329,51 @@ footer { background-color: var(--nav-bg); text-align: center; padding: 2rem 0; b
     .nav-links { display: none; }
     .hero-card { width: 90%; padding: 2rem; }
 }
+
+/* --- Profile Image Hover Effect --- */
+.profile-link {
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden; /* Ensures overlay doesn't spill outside circle */
+    cursor: pointer;
+}
+
+.profile-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease;
+    border-radius: 50%;
+}
+
+.profile-overlay i {
+    color: #fff;
+    font-size: 2.5rem;
+    animation: bounce 2s infinite; /* Bouncing animation */
+}
+
+/* Show overlay on hover */
+.profile-link:hover .profile-overlay {
+    opacity: 1;
+}
+
+/* Bouncing Arrow Animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-7px);
+    }
+}
