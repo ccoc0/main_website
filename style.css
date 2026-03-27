@@ -335,7 +335,7 @@ footer { background-color: var(--nav-bg); text-align: center; padding: 2rem 0; b
     position: relative;
     display: inline-block;
     border-radius: 50%;
-    overflow: hidden; /* Ensures overlay doesn't spill outside circle */
+    overflow: hidden;
     cursor: pointer;
 }
 
@@ -345,7 +345,7 @@ footer { background-color: var(--nav-bg); text-align: center; padding: 2rem 0; b
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+    background-color: rgba(0, 0, 0, 0.6); /* Dark shade */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -356,8 +356,8 @@ footer { background-color: var(--nav-bg); text-align: center; padding: 2rem 0; b
 
 .profile-overlay i {
     color: #fff;
-    font-size: 2.5rem;
-    animation: bounce 2s infinite; /* Bouncing animation */
+    font-size: 3rem;
+    animation: tap 1.5s infinite; /* Tapping animation */
 }
 
 /* Show overlay on hover */
@@ -365,15 +365,12 @@ footer { background-color: var(--nav-bg); text-align: center; padding: 2rem 0; b
     opacity: 1;
 }
 
-/* Bouncing Arrow Animation */
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
+/* Tapping Animation */
+@keyframes tap {
+    0%, 100% {
+        transform: scale(1); /* Normal size */
     }
-    40% {
-        transform: translateY(-15px);
-    }
-    60% {
-        transform: translateY(-7px);
+    50% {
+        transform: scale(0.9); /* Shrinks slightly like a press */
     }
 }
